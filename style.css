@@ -26,7 +26,6 @@ body {
 
 #item img {
 	width: 250px;
-	padding-bottom: 20px;
 }
 
 .btn {
@@ -48,4 +47,8 @@ body {
 
 .usercard {
 	text-align: center;
+}
+
+p {
+  margin-top: 5px;
 }
