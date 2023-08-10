@@ -14,6 +14,6 @@ let usercard = document.getElementById("usercard");
 
 let p = document.createElement("p");
 
-p.innerText = window.Telegram.data;
+p.innerText = new URLSearchParams(window.location.search).get('data');
 
 usercard.appendChild(p);
