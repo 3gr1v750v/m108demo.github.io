@@ -14,6 +14,6 @@ let usercard = document.getElementById("usercard");
 
 let p = document.createElement("p");
 
-p.innerText = `${tg}`;
+p.innerText = `${tg.dataset}`;
 
 usercard.appendChild(p);
