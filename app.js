@@ -14,6 +14,6 @@ let usercard = document.getElementById("usercard");
 
 let p = document.createElement("p");
 
-p.innerText = tg.initDataUnsafe.data;
+p.innerText = tg.initData.data;
 
 usercard.appendChild(p);
