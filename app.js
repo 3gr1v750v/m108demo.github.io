@@ -14,6 +14,6 @@ let usercard = document.getElementById("usercard");
 
 let p = document.createElement("p");
 
-p.innerText = window.Telegram.WebApp.initDataUnsafe.data;
+p.innerText = `${tg.initDataUnsafe.data} ${tg.initDataUnsafe.user.first_name}`;
 
 usercard.appendChild(p);
