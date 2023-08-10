@@ -18,5 +18,13 @@ const param1 = urlParams.get('param1');
 // Select the <div> element
 const usercard = document.getElementById('usercard');
 
-// Set the innerHTML to the param1 value
-usercard.innerHTML = param1;
+const p = document.createElement('p');
+
+// Create the text node for message
+const message = document.createTextNode(param1);
+
+// Add text node to <p> element
+p.appendChild(message);
+
+// Add <p> inside <div>
+usercard.appendChild(p);
