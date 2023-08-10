@@ -299,7 +299,7 @@
   var themeParams = {}, colorScheme = 'light';
   var webAppVersion = '6.0';
   var webAppPlatform = 'unknown';
-  var globalDatasetParam = "";
+  var globalDatasetParam = '';
 
   if (initParams.tgWebAppData && initParams.tgWebAppData.length) {
     webAppInitData = initParams.tgWebAppData;
