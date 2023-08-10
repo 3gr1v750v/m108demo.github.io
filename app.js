@@ -10,20 +10,13 @@ protect.addEventListener('click', () => {
     document.getElementById("form").style.display = "block";
 });
 
-const currentUrl = window.location.href;
+const urlParams = new URLSearchParams(window.location.search);
 
-// Function to extract parameter value from URL
-function getParamValue(paramName) {
-    const urlParams = new URLSearchParams(currentUrl);
-    return urlParams.get(paramName);
-}
+// Get the 'param1' value
+const param1 = urlParams.get('param1');
 
-// Extract param1 value
-const param1Value = getParamValue('param1');
-const usercardElement = document.getElementById('usercard');
+// Select the <div> element
+const usercard = document.getElementById('usercard');
 
-// Clear the content of the usercard element
-usercardElement.textContent = '';
-
-// Display the param1 value directly in the usercard element
-usercardElement.textContent = param1Value || 'No value';
+// Set the innerHTML to the param1 value
+usercard.innerHTML = param1;
