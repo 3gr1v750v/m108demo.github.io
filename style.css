@@ -6,6 +6,10 @@ body {
 	background: var(--tg-theme-bg-color);
 }
 
+p {
+  margin-top: 5px;
+}
+
 .container {
 	max-width: 390px;
 }
@@ -47,8 +51,4 @@ body {
 
 .usercard {
 	text-align: center;
-}
-
-p {
-  margin-top: 5px;
 }
