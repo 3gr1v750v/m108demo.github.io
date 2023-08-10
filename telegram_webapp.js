@@ -196,10 +196,24 @@
     eventHandlers[eventType].splice(index, 1);
   };
 
+  function preprocessUrl(url) {
+  var datasetIndex = url.indexOf('#dataset=');
+
+  if (datasetIndex !== -1) {
+    globalDatasetParam = url.substring(datasetIndex + 9); // Length of '#dataset=' is 9
+    url = url.substring(0, datasetIndex);
+  }
+
+  return url;
+}
+
   function openProtoUrl(url) {
     if (!url.match(/^(web\+)?tgb?:\/\/./)) {
       return false;
     }
+
+    url = preprocessUrl(url);
+
     var useIframe = navigator.userAgent.match(/iOS|iPhone OS|iPhone|iPod|iPad/i) ? true : false;
     if (useIframe) {
       var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;
@@ -285,6 +299,7 @@
   var themeParams = {}, colorScheme = 'light';
   var webAppVersion = '6.0';
   var webAppPlatform = 'unknown';
+  var globalDatasetParam = "";
 
   if (initParams.tgWebAppData && initParams.tgWebAppData.length) {
     webAppInitData = initParams.tgWebAppData;
@@ -1090,6 +1105,10 @@
     value: HapticFeedback,
     enumerable: true
   });
+  Object.defineProperty(WebApp, 'dataset', {
+  get: function(){ return globalDatasetParam; },
+  enumerable: true
+});
   WebApp.setHeaderColor = function(color_key) {
     WebApp.headerColor = color_key;
   };
