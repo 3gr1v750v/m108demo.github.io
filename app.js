@@ -10,7 +10,6 @@ protect.addEventListener('click', () => {
     document.getElementById("form").style.display = "block";
 });
 
-// Get the current URL
 const currentUrl = window.location.href;
 
 // Function to extract parameter value from URL
@@ -19,13 +18,12 @@ function getParamValue(paramName) {
     return urlParams.get(paramName);
 }
 
-// Extract and display param1 value
+// Extract param1 value
 const param1Value = getParamValue('param1');
 const usercardElement = document.getElementById('usercard');
 
-// Create a paragraph element to display the param1 value
-const paramValueElement = document.createElement('p');
-paramValueElement.textContent = `Param1 Value: ${param1Value}`;
+// Clear the content of the usercard element
+usercardElement.textContent = '';
 
-// Append the paragraph element to the usercard element
-usercardElement.appendChild(paramValueElement);
+// Display the param1 value directly in the usercard element
+usercardElement.textContent = param1Value || 'No value';
