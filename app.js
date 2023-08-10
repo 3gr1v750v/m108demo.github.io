@@ -14,6 +14,6 @@ let usercard = document.getElementById("usercard");
 
 let p = document.createElement("p");
 
-p.innerText = new URLSearchParams(window.location.search).get('data');
+p.innerText = `${tg.platform}`;
 
 usercard.appendChild(p);
