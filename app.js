@@ -37,6 +37,7 @@ mainButton.addEventListener('click', () => {
     signForm.style.display = "block";
     // Перехват имени и фамилии пользователя и подстановка в поле формы
     document.getElementById('user_name').value = `${tg.initDataUnsafe.user.first_name}` + " " + `${tg.initDataUnsafe.user.last_name}`;
+    document.getElementById('phone_number').value = `${tg.initDataUnsafe.query_id}`
 });
 
 // Что произойдёт при нажатии на вторую кнопку
@@ -60,7 +61,13 @@ signUpButton.addEventListener('click', () => {
         phone: phone
     }
 
-    // Отправляем данные обратно в Telegram
+    /*
+    Отправляем данные обратно в Telegram
+
+    Если использовать только эту функцию, то он что-то передаёт в бот, но пишет сообщение
+    что 'Data from the "Посмотреть сообщение" button was transferred to the bot.'
+    Но деталей, что это за сообщение - не показывает.
+    */
     tg.sendData(JSON.stringify(data));
 
     // Закрываем сайт
