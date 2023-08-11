@@ -10,7 +10,7 @@ mainButton.addEventListener('click', () => {
     let container = document.querySelector(".container");
     container.style.display = "none";
     signForm.style.display = "block";
-    document.getElementById('user_name').value = `${tg.initDataUnsafe.user.first_name}`;
+    document.getElementById('user_name').value = `${tg.initDataUnsafe.user.first_name}` + " " + `${tg.initDataUnsafe.user.last_name}`;
 });
 
 const urlParams = new URLSearchParams(window.location.search);

@@ -41,11 +41,12 @@ body {
 .alien_message {
     color: green;
     font-family: cursive, sans-serif;
+    font-size: 20px;
 }
 
 .recruit_message {
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .form-group {
