@@ -24,6 +24,7 @@ mainButton.addEventListener('click', () => {
 
 // Что произойдёт при нажатии на вторую кнопку
 signUpButton.addEventListener('click', () => {
+    event.preventDefault();
     // Очищаем данные ошибок
     document.getElementById("error").innerText = '';
 
@@ -35,7 +36,7 @@ signUpButton.addEventListener('click', () => {
     if (phone.trim() === '')  {
         document.getElementById("error").innerText = "Please enter you phone";
         return;
-    };
+    }
 
     //Создаём массив данных из полученных данных
     let data = {
