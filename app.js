@@ -32,7 +32,7 @@ signUpButton.addEventListener('click', () => {
     let phone = document.getElementById('phone_number').value;
 
     // Проверка введённых данных
-    if(phone.length < 1) {
+    if (phone.trim() === '')  {
         document.getElementById("error").innerText = "Please enter you phone";
         return;
     };
