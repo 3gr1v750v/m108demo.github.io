@@ -2,15 +2,15 @@ let tg = window.Telegram.WebApp;
 
 tg.expand();
 
-let protect = document.getElementById("but");
+let mainButton = document.getElementById("but");
 let signForm = document.getElementById("form");
 signForm.style.display = "none";
 
-protect.addEventListener('click', () => {
+mainButton.addEventListener('click', () => {
     let container = document.querySelector(".container");
     container.style.display = "none";
     signForm.style.display = "block";
-    document.getElementById('user_name').value = 'Somecontent';
+    document.getElementById('user_name').value = `${tg.initDataUnsafe.user.first_name}`;
 });
 
 const urlParams = new URLSearchParams(window.location.search);
