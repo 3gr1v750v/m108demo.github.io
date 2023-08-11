@@ -61,7 +61,7 @@ signUpButton.addEventListener('click', () => {
     let data = {
         name: name,
         phone: phone
-    }
+    };
 
     /*
     Отправляем данные обратно в Telegram
@@ -70,7 +70,7 @@ signUpButton.addEventListener('click', () => {
     что 'Data from the "Посмотреть сообщение" button was transferred to the bot.'
     Но деталей, что это за сообщение - не показывает.
     */
-    //tg.sendData(JSON.stringify(data));
+    tg.sendData(JSON.stringify(data));
 
 
     // Закрываем сайт
