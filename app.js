@@ -30,6 +30,9 @@ let signForm = document.getElementById("form");
 let signUpButton = document.getElementById('sign')
 signForm.style.display = "none";
 
+//id сессии для отправки сообщений из webApp в телеграм
+let query_id = tg.initDataUnsafe.query_id;
+
 // Что произойдёт при нажатии на первую кнопку
 mainButton.addEventListener('click', () => {
     let container = document.querySelector(".container");
@@ -37,7 +40,6 @@ mainButton.addEventListener('click', () => {
     signForm.style.display = "block";
     // Перехват имени и фамилии пользователя и подстановка в поле формы
     document.getElementById('user_name').value = `${tg.initDataUnsafe.user.first_name}` + " " + `${tg.initDataUnsafe.user.last_name}`;
-    document.getElementById('phone_number').value = `${tg.initDataUnsafe.query_id}`
 });
 
 // Что произойдёт при нажатии на вторую кнопку
@@ -51,11 +53,11 @@ signUpButton.addEventListener('click', () => {
 
     // Проверка введённых данных
     if(phone.length < 1) {
-        document.getElementById("error").InnerText = "Please enter you phone";
+        document.getElementById("error").innerText = "Please enter you phone";
         return;
     };
 
-    // Создаём массив данных из полученных данных
+    //Создаём массив данных из полученных данных
     let data = {
         name: name,
         phone: phone
@@ -68,7 +70,8 @@ signUpButton.addEventListener('click', () => {
     что 'Data from the "Посмотреть сообщение" button was transferred to the bot.'
     Но деталей, что это за сообщение - не показывает.
     */
-    tg.sendData(JSON.stringify(data));
+    //tg.sendData(JSON.stringify(data));
+
 
     // Закрываем сайт
     tg.close()
