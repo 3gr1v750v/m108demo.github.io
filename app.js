@@ -45,7 +45,7 @@ mainButton.addEventListener('click', () => {
 // Что произойдёт при нажатии на вторую кнопку
 signUpButton.addEventListener('click', () => {
     // Очищаем данные ошибок
-    document.getElementById("error").InnerText = '';
+    document.getElementById("error").innerText = '';
 
     // Забираем значения
     let name = document.getElementById('user_name').value;
