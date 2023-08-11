@@ -1,9 +1,29 @@
+window.onload = function() {
+  if (window.performance && window.performance.clearResourceTimings) {
+    window.performance.clearResourceTimings();
+  }
+  if (window.performance && window.performance.clearMeasures) {
+    window.performance.clearMeasures();
+  }
+  if (window.performance && window.performance.clearMarks) {
+    window.performance.clearMarks();
+  }
+  if (window.caches) {
+    caches.keys().then(function(names) {
+      for (let name of names) {
+        caches.delete(name);
+      }
+    });
+  }
+};
+
 let tg = window.Telegram.WebApp;
 
 tg.expand();
 
 let mainButton = document.getElementById("but");
 let signForm = document.getElementById("form");
+let signUpButton = document.getElementById('sign')
 signForm.style.display = "none";
 
 mainButton.addEventListener('click', () => {
@@ -11,6 +31,10 @@ mainButton.addEventListener('click', () => {
     container.style.display = "none";
     signForm.style.display = "block";
     document.getElementById('user_name').value = `${tg.initDataUnsafe.user.first_name}` + " " + `${tg.initDataUnsafe.user.last_name}`;
+});
+
+signUpButton.addEventListener('click', () => {
+    tg.close()
 });
 
 const urlParams = new URLSearchParams(window.location.search);
