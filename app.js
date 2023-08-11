@@ -2,13 +2,15 @@ let tg = window.Telegram.WebApp;
 
 tg.expand();
 
-let protect = document.getElementById("btn");
-let signForm = document.getElementById("form").style.display = "none";
+let protect = document.getElementById("but");
+let signForm = document.getElementById("form");
+signForm.style.display = "none";
 
 protect.addEventListener('click', () => {
-    document.getElementById(".container").style.display = "none";
+    let container = document.querySelector(".container");
+    container.style.display = "none";
     signForm.style.display = "block";
-    document.getElementById('user_name').value = tg.InitDataUnsafe.user.first_name + " " + tg.InitDataUnsafe.user.last_name
+    document.getElementById('user_name').value = tg.InitDataUnsafe.user.first_name + " " + tg.InitDataUnsafe.user.last_name;
 });
 
 const urlParams = new URLSearchParams(window.location.search);
