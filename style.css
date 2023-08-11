@@ -27,7 +27,7 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     background-color: var(--tg-theme-button-color);
-    color: white;
+    color: var(--tg-theme-button-text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -35,7 +35,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: var(--tg-theme-hint-color);
 }
 
 .alien_message {
@@ -45,7 +45,6 @@ body {
 
 .recruit_message {
     text-align: center;
-    color: green;
     font-size: 20px;
 }
 
