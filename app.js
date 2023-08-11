@@ -1,23 +1,3 @@
-// Попытка принудительной очистки кэша при открытии сайта
-window.onload = function() {
-  if (window.performance && window.performance.clearResourceTimings) {
-    window.performance.clearResourceTimings();
-  }
-  if (window.performance && window.performance.clearMeasures) {
-    window.performance.clearMeasures();
-  }
-  if (window.performance && window.performance.clearMarks) {
-    window.performance.clearMarks();
-  }
-  if (window.caches) {
-    caches.keys().then(function(names) {
-      for (let name of names) {
-        caches.delete(name);
-      }
-    });
-  }
-};
-
 // Вызов объекта телеграм WebApp
 let tg = window.Telegram.WebApp;
 
