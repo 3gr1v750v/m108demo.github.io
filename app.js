@@ -26,52 +26,95 @@ mainButton.addEventListener('click', () => {
 });
 
 // Что произойдёт при нажатии на вторую кнопку
-signUpButton.addEventListener('click', () => {
+// signUpButton.addEventListener('click', () => {
+//     event.preventDefault();
+//     // Очищаем данные ошибок
+//     document.getElementById("error").innerText = '';
+//
+//     // Забираем значения
+//     let name = document.getElementById('user_name').value;
+//     let phone = document.getElementById('phone_number').value;
+//
+//     // Проверка введённых данных
+//     if (phone.trim() === '')  {
+//         document.getElementById("error").innerText = "Please enter you phone";
+//         return;
+//     }
+//
+//     //Создаём массив данных из полученных данных
+//     let data = {
+//         name: name,
+//         phone: phone
+//     };
+//
+//     /*
+//     Отправляем данные обратно в Telegram
+//
+//     Если использовать только эту функцию, то он что-то передаёт в бот, но пишет сообщение
+//     что 'Data from the "Посмотреть сообщение" button was transferred to the bot.'
+//     Но деталей, что это за сообщение - не показывает.
+//     */
+//     // tg.sendData(JSON.stringify(data));
+//
+//     const response = fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({
+//             chat_id: chatId,
+//             text: "Завершение работы",
+//         })
+//         });
+//
+//
+//     // Закрываем сайт
+//     tg.close()
+// });
+
+signUpButton.addEventListener('click', async (event) => {
     event.preventDefault();
-    // Очищаем данные ошибок
+
     document.getElementById("error").innerText = '';
 
-    // Забираем значения
     let name = document.getElementById('user_name').value;
     let phone = document.getElementById('phone_number').value;
 
-    // Проверка введённых данных
-    if (phone.trim() === '')  {
-        document.getElementById("error").innerText = "Please enter you phone";
+    if (phone.trim() === '') {
+        document.getElementById("error").innerText = "Please enter your phone";
         return;
     }
 
-    //Создаём массив данных из полученных данных
     let data = {
         name: name,
         phone: phone
     };
 
-    /*
-    Отправляем данные обратно в Telegram
-
-    Если использовать только эту функцию, то он что-то передаёт в бот, но пишет сообщение
-    что 'Data from the "Посмотреть сообщение" button was transferred to the bot.'
-    Но деталей, что это за сообщение - не показывает.
-    */
-    // tg.sendData(JSON.stringify(data));
-
-    const response = fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            chat_id: chatId,
-            text: "Завершение работы",
-        })
+    try {
+        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: "Завершение работы",
+            })
         });
 
+        if (response.ok) {
+            console.log('Message sent successfully');
+        } else {
+            console.error('Failed to send message');
+        }
+    } catch (error) {
+        console.error('Error sending message:', error);
+    }
 
-    // Закрываем сайт
-    tg.close()
+    // Assuming tg is an object representing your Telegram client
+    // Close the client or perform any other necessary cleanup
+    tg.close();
 });
-
 
 // Перехват 'param1' из параметров ссылки и подстановка в сайт
 const urlParams = new URLSearchParams(window.location.search);
