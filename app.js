@@ -98,7 +98,7 @@ signUpButton.addEventListener('click', async (event) => {
             },
             body: JSON.stringify({
                 chat_id: chatId,
-                text: 'Спасибо ' + name + 'за участие в опросе, мы свяжемся с вами по телефону' + phone
+                text: 'Спасибо ' + name + ' за участие в опросе, мы свяжемся с вами по телефону ' + phone
             })
         });
 
