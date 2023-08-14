@@ -20,7 +20,7 @@ mainButton.addEventListener('click', () => {
     signForm.style.display = "block";
     // Перехват имени и фамилии пользователя и подстановка в поле формы
     document.getElementById('user_name').value = `${tg.initDataUnsafe.user.first_name}` + " " + `${tg.initDataUnsafe.user.last_name}`;
-    document.getElementById('user_name').value = `${tg.initDataUnsafe.user.id}`;
+    document.getElementById('phone_number').value = `${tg.initDataUnsafe.user.id}`;
 });
 
 // Что произойдёт при нажатии на вторую кнопку
