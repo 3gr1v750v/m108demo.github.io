@@ -72,8 +72,11 @@
 
   async function typeMessages() {
     for (const message of messages) {
-        typingOutput.innerHTML += message;
+      for (const char of message) {
+        typingOutput.textContent += char;
         await new Promise(resolve => setTimeout(resolve, typingSpeed));
+      }
+      typingOutput.textContent += "\n"; // Add a line break after each message
     }
 
     // Show the "Test Bot Response" button
