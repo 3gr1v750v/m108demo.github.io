@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG to PNG Converter</title>
+</head>
+<body>
+    <script type="module">
+        // Import Canvg from the Skypack CDN
+        import { Canvg } from 'https://cdn.skypack.dev/canvg';
+
+        async function convertAndDisplayImage() {
+            const imageUrl = "https://plan.cdn.legenda-dom.ru/vPVXVhjrpR/jvBY34mS7j0zNhs.svg";
+            const imageContainer = document.getElementById('image-container');
+            const canvas = document.createElement('canvas');
+            // Размер изображения
+            canvas.height = 700;
+            const ctx = canvas.getContext('2d');
+
+            // Fetch the SVG data
+            const response = await fetch(imageUrl);
+            const svgData = await response.text();
+
+            // Use Canvg to render the SVG to the canvas
+            const v = Canvg.fromString(ctx, svgData);
+            v.start();
+
+            // Convert the Canvas to a PNG image
+            const img = new Image();
+            img.src = canvas.toDataURL("image/png");
+
+            // Add the image to the page
+            img.onload = function () {
+                imageContainer.innerHTML = '';
+                imageContainer.appendChild(img);
+            };
+
+            // Handle errors
+            img.onerror = function () {
+                alert('Failed to load SVG image.');
+            };
+        }
+
+        // Вызов функции при загрузке страницы
+        window.onload = convertAndDisplayImage;
+    </script>
+    <div id="image-container"></div>
+</body>
+</html>
