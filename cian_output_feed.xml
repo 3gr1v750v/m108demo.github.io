@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed>
+  <feed_version>2</feed_version>
+  <object>
+    <Category>newBuildingFlatSale</Category>
+    <ExternalId>15782295</ExternalId>
+    <RoomType>separate</RoomType>
+    <Description>Продается 2 к. кв., 13 этаж, 15 минут на машине до метро "Василеостровская"</Description>
+    <Address>Московская область, Одинцовский район, Центральный, 18-я линия В.О., 32</Address>
+    <Coordinates>
+      <Lat>55.735525</Lat>
+      <Lng>37.642474</Lng>
+    </Coordinates>
+    <CadastralNumber>47:14:1203001:814</CadastralNumber>
+    <FlatRoomsCount>2</FlatRoomsCount>
+    <IsEuroFlat>true</IsEuroFlat>
+    <Phones>
+      <PhoneSchema>
+        <CountryCode>+7</CountryCode>
+        <Number>+7812500400</Number>
+      </PhoneSchema>
+      <PhoneSchema>
+        <CountryCode>+7</CountryCode>
+        <Number>+7812500401</Number>
+      </PhoneSchema>
+    </Phones>
+    <Highway>
+      <Id>Минское шоссе</Id>
+      <Distance>10</Distance>
+    </Highway>
+    <Highways>
+      <HighwayInfoSchema>
+        <Id>Минское шоссе</Id>
+        <Distance>10</Distance>
+      </HighwayInfoSchema>
+    </Highways>
+    <IsApartments>true</IsApartments>
+    <Undergrounds>
+      <UndergroundInfoSchema>
+        <Id>Технологический институт</Id>
+        <Time>5</Time>
+        <TransportType>transport</TransportType>
+      </UndergroundInfoSchema>
+      <UndergroundInfoSchema>
+        <Id>Технологический институт</Id>
+        <Time>10</Time>
+        <TransportType>walk</TransportType>
+      </UndergroundInfoSchema>
+    </Undergrounds>
+    <IsPenthouse>true</IsPenthouse>
+    <Booking>
+      <Status>free</Status>
+    </Booking>
+    <TotalArea>63</TotalArea>
+    <FloorNumber>13</FloorNumber>
+    <JKSchema>
+      <Id>15782295</Id>
+      <Name>Северная фантазия</Name>
+      <House>
+        <Id>1</Id>
+        <Name>Корпус 1</Name>
+        <Flat>
+          <FlatNumber>10а</FlatNumber>
+          <SectionNumber>1</SectionNumber>
+          <FlatType>2-1</FlatType>
+        </Flat>
+      </House>
+    </JKSchema>
+    <RoomDefinitions>
+      <Room>
+        <Area>15</Area>
+      </Room>
+      <Room>
+        <Area>35</Area>
+      </Room>
+    </RoomDefinitions>
+    <LivingArea>50</LivingArea>
+    <KitchenArea>12</KitchenArea>
+    <LoggiasCount>1</LoggiasCount>
+    <LayoutPhoto>
+      <FullUrl>https://cdn.crawler-xml.ru/images/L9ZHkGVTFsPyKT9.png</FullUrl>
+    </LayoutPhoto>
+    <Photos>
+      <PhotoSchema>
+        <FullUrl>https://compile-xml.ru/img/sampson/sampson-render-1.jpg</FullUrl>
+      </PhotoSchema>
+      <PhotoSchema>
+        <FullUrl>https://compile-xml.ru/img/sampson/sampson-render-2.jpg</FullUrl>
+      </PhotoSchema>
+      <PhotoSchema>
+        <FullUrl>https://compile-xml.ru/img/sampson/sampson-render-3.jpg</FullUrl>
+      </PhotoSchema>
+    </Photos>
+    <BalconiesCount>2</BalconiesCount>
+    <Decoration>черновая отделка</Decoration>
+    <ProjectDeclarationUrl>http://example.com/project-declaration.pdf</ProjectDeclarationUrl>
+    <WindowsViewType>['на улицу', 'во двор']</WindowsViewType>
+    <HasRamp>true</HasRamp>
+    <IsInHiddenBase>true</IsInHiddenBase>
+    <Videos>
+      <VideoSchema>
+        <Url>http://youtu.be/iwGFalTRHDA</Url>
+      </VideoSchema>
+      <VideoSchema>
+        <Url>http://youtu.be/iwGFalTRHDA</Url>
+      </VideoSchema>
+    </Videos>
+    <Title>Уютная однушка в эко-районе ВДНХ</Title>
+    <Building>
+      <FloorsCount>15</FloorsCount>
+      <MaterialType>монолит</MaterialType>
+      <CeilingHeight>3.25</CeilingHeight>
+      <PassengerLiftsCount>2</PassengerLiftsCount>
+      <Parking>
+        <Type>['подземная', 'наземная многоуровневая', 'за шлагбаумом во дворе', 'открытая во дворе']</Type>
+      </Parking>
+      <Deadline>
+        <Quarter>3</Quarter>
+        <Year>2024</Year>
+        <IsComplete>unfinished</IsComplete>
+      </Deadline>
+    </Building>
+    <PublishTerms>
+      <Terms>
+        <PublishTermSchema>
+          <Services>
+            <ServicesEnum>premium</ServicesEnum>
+            <ServicesEnum>highlight</ServicesEnum>
+          </Services>
+          <ExcludedServices>
+            <ExcludedServicesEnum>top3</ExcludedServicesEnum>
+          </ExcludedServices>
+        </PublishTermSchema>
+      </Terms>
+      <PromotionType>noPromotion</PromotionType>
+    </PublishTerms>
+    <BargainTerms>
+      <Price>4780000</Price>
+      <Currency>кв.м</Currency>
+      <MortgageAllowed>['Можно в ипотеку', 'Продажа доли']</MortgageAllowed>
+      <SaleType>альтернатива</SaleType>
+      <ActionId>A-234567</ActionId>
+    </BargainTerms>
+  </object>
+  <object>
+    <Category>newBuildingFlatSale</Category>
+    <ExternalId>15782295</ExternalId>
+    <RoomType>separate</RoomType>
+    <Description>Продается 2 к. кв., 13 этаж, 15 минут на машине до метро "Василеостровская"</Description>
+    <Address>Московская область, Одинцовский район, Центральный, 18-я линия В.О., 32</Address>
+    <Coordinates>
+      <Lat>55.735525</Lat>
+      <Lng>37.642474</Lng>
+    </Coordinates>
+    <CadastralNumber>47:14:1203001:814</CadastralNumber>
+    <FlatRoomsCount>2</FlatRoomsCount>
+    <IsEuroFlat>true</IsEuroFlat>
+    <Phones>
+      <PhoneSchema>
+        <CountryCode>+7</CountryCode>
+        <Number>+7812500400</Number>
+      </PhoneSchema>
+      <PhoneSchema>
+        <CountryCode>+7</CountryCode>
+        <Number>+7812500400</Number>
+      </PhoneSchema>
+    </Phones>
+    <Highway>
+      <Id>Минское шоссе</Id>
+      <Distance>10</Distance>
+    </Highway>
+    <Highways>
+      <HighwayInfoSchema>
+        <Id>Минское шоссе</Id>
+        <Distance>10</Distance>
+      </HighwayInfoSchema>
+    </Highways>
+    <IsApartments>true</IsApartments>
+    <Undergrounds>
+      <UndergroundInfoSchema>
+        <Id>Технологический институт</Id>
+        <Time>5</Time>
+        <TransportType>transport</TransportType>
+      </UndergroundInfoSchema>
+      <UndergroundInfoSchema>
+        <Id>Технологический институт</Id>
+        <Time>10</Time>
+        <TransportType>walk</TransportType>
+      </UndergroundInfoSchema>
+    </Undergrounds>
+    <IsPenthouse>true</IsPenthouse>
+    <Booking>
+      <Status>free</Status>
+    </Booking>
+    <TotalArea>63</TotalArea>
+    <FloorNumber>13</FloorNumber>
+    <JKSchema>
+      <Id>15782295</Id>
+      <Name>Северная фантазия</Name>
+      <House>
+        <Id>1</Id>
+        <Name>Корпус 1</Name>
+        <Flat>
+          <FlatNumber>10а</FlatNumber>
+          <SectionNumber>1</SectionNumber>
+          <FlatType>2-1</FlatType>
+        </Flat>
+      </House>
+    </JKSchema>
+    <AllRoomsArea>10+5-11</AllRoomsArea>
+    <LivingArea>50</LivingArea>
+    <KitchenArea>12</KitchenArea>
+    <LayoutPhoto>
+      <FullUrl>https://cdn.crawler-xml.ru/images/L9ZHkGVTFsPyKT9.png</FullUrl>
+    </LayoutPhoto>
+    <Photos>
+      <PhotoSchema>
+        <FullUrl>https://compile-xml.ru/img/sampson/sampson-render-1.jpg</FullUrl>
+      </PhotoSchema>
+      <PhotoSchema>
+        <FullUrl>https://compile-xml.ru/img/sampson/sampson-render-2.jpg</FullUrl>
+      </PhotoSchema>
+      <PhotoSchema>
+        <FullUrl>https://compile-xml.ru/img/sampson/sampson-render-3.jpg</FullUrl>
+      </PhotoSchema>
+    </Photos>
+    <BalconiesCount>2</BalconiesCount>
+    <Decoration>черновая отделка</Decoration>
+    <ProjectDeclarationUrl>http://example.com/project-declaration.pdf</ProjectDeclarationUrl>
+    <WindowsViewType>['на улицу', 'во двор']</WindowsViewType>
+    <SeparateWcsCount>2</SeparateWcsCount>
+    <CombinedWcsCount>1</CombinedWcsCount>
+    <HasRamp>true</HasRamp>
+    <IsInHiddenBase>true</IsInHiddenBase>
+    <Videos>
+      <VideoSchema>
+        <Url>http://youtu.be/iwGFalTRHDA</Url>
+      </VideoSchema>
+      <VideoSchema>
+        <Url>http://youtu.be/iwGFalTRHDA</Url>
+      </VideoSchema>
+    </Videos>
+    <Title>Уютная однушка в эко-районе ВДНХ</Title>
+    <Building>
+      <FloorsCount>15</FloorsCount>
+      <MaterialType>монолит</MaterialType>
+      <CeilingHeight>3.25</CeilingHeight>
+      <PassengerLiftsCount>2</PassengerLiftsCount>
+      <Parking>
+        <Type>['подземная', 'наземная многоуровневая', 'за шлагбаумом во дворе', 'открытая во дворе']</Type>
+      </Parking>
+      <Deadline>
+        <Quarter>3</Quarter>
+        <Year>2024</Year>
+        <IsComplete>unfinished</IsComplete>
+      </Deadline>
+    </Building>
+    <PublishTerms>
+      <Terms>
+        <PublishTermSchema>
+          <Services>
+            <ServicesEnum>premium</ServicesEnum>
+            <ServicesEnum>highlight</ServicesEnum>
+          </Services>
+          <ExcludedServices>
+            <ExcludedServicesEnum>top3</ExcludedServicesEnum>
+          </ExcludedServices>
+        </PublishTermSchema>
+      </Terms>
+      <PromotionType>noPromotion</PromotionType>
+    </PublishTerms>
+    <BargainTerms>
+      <Price>4780000</Price>
+      <Currency>кв.м</Currency>
+      <MortgageAllowed>['Можно в ипотеку', 'Продажа доли']</MortgageAllowed>
+    </BargainTerms>
+  </object>
+</feed>
